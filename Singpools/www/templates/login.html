@@ -1,0 +1,23 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+	<div class = "wrapper">
+		<div class="app-block" style="padding: 0px;">
+			<div class="cube"><img src="images/cube.png" class="img-responsive" alt="" /></div>
+			<form class = "login-form" ng-submit="login.signIn(user)">
+				<input style="width: 100%;" type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ng-model = "user.username" />
+				<input style="width: 100%;" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" ng-model = "user.password" />
+				<div class="failure" ng-hide="login.errorResponse"> 
+					<p type="text">We Couldn't Recognise Your Login Details </p> 
+				</div>
+				<div class="submit"><input type="submit" value="Sign in" /></div>
+
+				<div class="clear"></div>
+				<p><a href="#">Forgot Password ? </a></p>
+				<p>""</p>
+			</form>
+		</div>
+	</div>
