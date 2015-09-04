@@ -1,0 +1,50 @@
+<ion-view view-title="User Register" name="user-register-view">
+    
+    <!-- Header -->
+    <ion-nav-bar>
+        <ion-nav-button>
+            </ion-nav-buttons>
+    </ion-nav-bar>
+    
+    <!-- Content -->
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">First Name</span>
+                <input type="text" placeholder="Singpools" ng-model="user.firstName" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Last Name</span>
+                <input type="text" placeholder="Singpools" ng-model="user.lastName" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="Singpools@singpools.com" ng-model="user.email" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Phone Number</span>
+                <input type="number" placeholder="08123456789" ng-model="user.phoneNumber" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">PIN</span>
+                <input type="password" placeholder="xxxxxx" ng-model="user.pin" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Enter Password</span>
+                <input type="password" placeholder="xxxxxx" ng-model="user.password" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Re-enter Password</span>
+                <input type="password" placeholder="xxxxxx" ng-model="user.cpassword" required compare-to="user.password">
+            </label>
+        </div>
+
+        <div ng-messages="user.cpassword.$error" ng-messages-include="#"></div>
+        
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="submitData(user)" ui-sref="otp">
+                Submit
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
